@@ -22,14 +22,7 @@ SECRET_KEY = os.environ.get(
     "local-development-only-not-for-production-change-this-key",
 )
 
-ALLOWED_HOSTS = [
-    host.strip()
-    for host in os.environ.get(
-        "DJANGO_ALLOWED_HOSTS",
-        "localhost,127.0.0.1,booktracer-app.onrender.com",
-    ).split(",")
-    if host.strip()
-]
+ALLOWED_HOSTS = ["booktracer-app.onrender.com", ".onrender.com", "localhost", "127.0.0.1"]
 
 CSRF_TRUSTED_ORIGINS = [
     origin.strip()
