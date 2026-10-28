@@ -33,6 +33,7 @@ CSRF_TRUSTED_ORIGINS = [
     if origin.strip()
 ]
 
+
 DEBUG = os.environ.get(
     "DJANGO_DEBUG", "True"
 ).strip().lower() in {"1", "true", "yes", "on"}
